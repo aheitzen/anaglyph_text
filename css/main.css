@@ -1,0 +1,52 @@
+html, body {
+	height: 80%;
+	width: 100%;
+}
+
+p {
+	font-family: Georgia, serif;
+	font-size: 100px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 45px;
+}
+
+#dead-center {
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#sub-head {
+	font-size: 30px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 500;
+}
+
+.anaglyph {
+    position: relative;
+    color: transparent;
+    font-size: 100px;
+}
+
+.anaglyph:before, .anaglyph:after {
+    content: attr(data-text);
+    position: absolute;
+    mix-blend-mode: multiply;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .anaglyph::before {
+    color: red;
+    left: -4px;
+  }
+  .anaglyph::after {
+    color: cyan;
+    left: 4px;
+  }
+}
